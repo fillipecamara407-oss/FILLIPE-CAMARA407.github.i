@@ -1,0 +1,338 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --fundo: #fffaf8;
+  --branco: #ffffff;
+  --rosa: #d8a4a8;
+  --rosa-claro: #f5e6e5;
+  --vinho: #633b43;
+  --texto: #423638;
+  --cinza: #807477;
+  --borda: #eee1df;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.topo {
+  width: 100%;
+  min-height: 82px;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 250, 248, 0.96);
+  border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--vinho);
+  letter-spacing: 1px;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 80px 9%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.sobretitulo,
+.categoria {
+  display: inline-block;
+  color: #a16c74;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.introducao h1,
+.cabecalho-secao h2,
+.faixa h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.introducao h1 {
+  margin: 18px 0;
+  font-size: clamp(38px, 5vw, 64px);
+  color: var(--vinho);
+}
+
+.introducao p {
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: var(--cinza);
+  font-size: 16px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 4px;
+  background: var(--rosa);
+  color: #fff;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.botao:hover {
+  background: var(--vinho);
+  transform: translateY(-2px);
+}
+
+.botao-escuro {
+  background: var(--vinho);
+}
+
+.hero-arte {
+  min-height: 390px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 48% 48% 5px 5px;
+  background: linear-gradient(145deg, #f4dedc, #dfb5b5);
+}
+
+.anel {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 50%;
+}
+
+.flor {
+  position: relative;
+  z-index: 1;
+  font-size: 115px;
+  color: white;
+  opacity: 0.85;
+}
+
+.texto-arte {
+  position: absolute;
+  bottom: 28px;
+  z-index: 2;
+  color: var(--vinho);
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+.secao {
+  padding: 85px 8%;
+}
+
+.cabecalho-secao {
+  max-width: 650px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.cabecalho-secao h2 {
+  margin-top: 12px;
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--vinho);
+}
+
+.cabecalho-secao p {
+  margin-top: 12px;
+  color: var(--cinza);
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cartao {
+  overflow: hidden;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(99, 59, 67, 0.09);
+}
+
+.cartao-arte {
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cartao-barbara {
+  background: linear-gradient(135deg, #f1d8d8, #e6bfc3);
+}
+
+.cartao-rc {
+  background: linear-gradient(135deg, #e9dce7, #cbb4c9);
+}
+
+.monograma {
+  font-family: 'Playfair Display', serif;
+  font-size: 90px;
+  color: rgba(255,255,255,0.9);
+}
+
+.selo {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.85);
+  color: var(--vinho);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cartao-corpo {
+  padding: 28px;
+}
+
+.cartao-corpo h3 {
+  margin: 10px 0;
+  color: var(--vinho);
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+}
+
+.cartao-corpo p {
+  margin-bottom: 20px;
+  color: var(--cinza);
+}
+
+.link-whats {
+  display: inline-block;
+  color: #477b5b;
+  font-weight: 700;
+}
+
+.faixa {
+  padding: 65px 8%;
+  background: var(--vinho);
+  color: white;
+  text-align: center;
+}
+
+.faixa h2 {
+  margin-bottom: 15px;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.faixa p {
+  margin-bottom: 25px;
+  color: #f0dddd;
+}
+
+.faixa-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.botao-claro {
+  background: white;
+  color: var(--vinho);
+}
+
+.botao-contorno {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.rodape {
+  padding: 25px 7%;
+  background: #f7eeeb;
+  color: var(--cinza);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .topo {
+    padding: 18px 5%;
+  }
+
+  .marca {
+    font-size: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 55px 6%;
+  }
+
+  .hero-arte {
+    min-height: 300px;
+  }
+
+  .secao {
+    padding: 60px 6%;
+  }
+
+  .cartoes {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-arte {
+    min-height: 230px;
+  }
+
+  .cartao-corpo {
+    padding: 23px;
+  }
+
+  .faixa {
+    padding: 55px 6%;
+  }
+}
